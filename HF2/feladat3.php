@@ -16,13 +16,15 @@ $napok = array(
 );
 
 foreach ($napok as $nyelv => $napokNev) {
+    $index = 1;
     echo "$nyelv: ";
     foreach ($napokNev as $nap) {
-        if ($nap === "K" || $nap === "Cs" || $nap === "Szo") {
+        if ($index % 2 == 0) {
             echo "<b>$nap</b>, ";
         } else {
             echo "$nap, ";
         }
+        $index += 1;
     }
     echo "<br>";
 }
